@@ -23,7 +23,7 @@ public class Principal {
 	
 	
 public static void main(String[] args) {
-	System.out.println("TRY");
+	System.out.println("teste");
 	
 	Usuario usuario1 = new Usuario();
 	usuario1.setEmail("joao@email.com");
