@@ -23,25 +23,18 @@ public class Principal {
 	
 	
 public static void main(String[] args) {
-	System.out.println("teste");
+
 	
-	Usuario usuario1 = new Usuario();
-	usuario1.setEmail("joao@email.com");
-	usuario1.setNome("Joao");
-	usuario1.setSenha("123456");
-	usuario1.setPerfil("ADMINISTRADOR");
-	
-	Usuario.addUsuario(usuario1);
+	Usuario usuario1 = new Usuario("Joao","joao@email.com","123456","ADMINISTRADOR");
+
+	usuario1.save();
 	
 	
-	Usuario usuario2 = new Usuario();
-	usuario1.setEmail("saulo@email.com");
-	usuario1.setNome("Saulo");
-	usuario1.setSenha("1234");
-	usuario1.setPerfil("USUARIO");
 	
-	Usuario.addUsuario(usuario2);
-	Usuario.imprimir();
+	Usuario usuario2 = new Usuario("Saulo","saulo@email.com","1234");
+
+	usuario2.save();
+	
 }
 
 

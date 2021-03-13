@@ -5,12 +5,41 @@ import java.util.List;
 
 public class Usuario {
 	
-	private static List <Usuario> usuarios= new ArrayList<Usuario>();
+	private static  List <Usuario> usuarios= new ArrayList<Usuario>();
 	
 	private String nome;
 	private String email;
 	private String senha;
 	private String perfil;
+	
+	
+	
+	
+	
+	
+	public Usuario(String nome, String email, String senha, String perfil) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		//TODO FIX SENHA DEVE SER CRIPTOGRAFADA
+		this.senha = senha;
+		this.perfil = perfil;
+	}
+	
+	//sobrecarga de construtores  com o this o ultimo dado que 
+	//estaria faltando ser colocado  nos parametros do metodo acima
+	//seria o perfil, aqui nós colocamos um perfil como parametro 
+	//no this que era reconhecer que estamos querendo usar um construtor
+	public Usuario(String nome, String email, String senha) {
+		this(nome,email,senha,"USUARIO");
+		/*super();
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;*/
+	}
+
+
+	
 	
 	public String getNome() {
 		return nome;
@@ -44,14 +73,26 @@ public class Usuario {
 	//um objeto a lista, ele não vai se perder ao se criar
 	//um novo objeto. A impressao em seguida, é para demosntrar
 	//que os objetos estão sendo salvos.
-	public static void addUsuario(Usuario usuario) {
+	
+	
+	
+	
+/*	public static void addUsuario(Usuario usuario) {
 		usuarios.add(usuario);
 		
-		/*for (Usuario user : usuarios) {
+		for (Usuario user : usuarios) {
 			System.out.println(user);
 			System.out.println();
-		}*/
+		}
 		
+	}*/
+	
+	public  void save() {
+		usuarios.add(this);
+		for (Usuario user : usuarios) {
+			System.out.println(user);
+			
+		}
 	}
 	
 	
@@ -59,7 +100,9 @@ public class Usuario {
 		
 		
 		for (Usuario user : usuarios) {
-			System.out.println(user.nome);
+			System.out.println("testes");
+			System.out.println(user);
+			System.out.println("testes");
 			//System.out.println();
 		}
 		
