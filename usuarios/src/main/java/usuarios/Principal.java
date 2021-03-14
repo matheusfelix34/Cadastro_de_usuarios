@@ -1,6 +1,7 @@
 package usuarios;
 
 import usuarios.model.Usuario;
+import usuarios.persistencia.UsuarioDAO;
 
 /*
  * Cadastro de usuarios  para um sitema.
@@ -24,16 +25,33 @@ public class Principal {
 	
 public static void main(String[] args) {
 
+	System.out.println("Usuarios Cadastrados");
+	
+	UsuarioDAO dao = new UsuarioDAO();
 	
 	Usuario usuario1 = new Usuario("Joao","joao@email.com","123456","ADMINISTRADOR");
 
-	usuario1.save();
-	
+	dao.save(usuario1);
+	System.out.println("Adcionei Joao ");
+for (Usuario user : dao.Lista()) {
+		
+		System.out.println(user);
+		
+
+	}
 	
 	
 	Usuario usuario2 = new Usuario("Saulo","saulo@email.com","1234");
 
-	usuario2.save();
+	dao.save(usuario2);
+	
+	System.out.println("Adcionei Saulo ");
+	for (Usuario user : dao.Lista()) {
+		
+		System.out.println(user);
+		
+
+	}
 	
 }
 
