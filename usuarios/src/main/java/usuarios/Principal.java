@@ -16,9 +16,10 @@ import usuarios.persistencia.UsuarioDAO;
  * Apenas o admim pode ver a lista de usuarios
  * 
  * 
+ * Cadastro de usuarios MVC		
  * 
  * 
- * T
+ * 
  * */
 public class Principal {
 	
