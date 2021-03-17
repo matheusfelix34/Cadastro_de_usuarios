@@ -34,8 +34,9 @@ public static void main(String[] args) {
 
 	dao.save(usuario1);
 	System.out.println("Adcionei Joao ");
-for (Usuario user : dao.Lista()) {
-		
+	
+for (Usuario user : dao.lista()) {
+		user.setNome("joao1");
 		System.out.println(user);
 		
 
@@ -47,7 +48,8 @@ for (Usuario user : dao.Lista()) {
 	dao.save(usuario2);
 	
 	System.out.println("Adcionei Saulo ");
-	for (Usuario user : dao.Lista()) {
+	
+	for (Usuario user : dao.lista()) {
 		
 		System.out.println(user);
 		
